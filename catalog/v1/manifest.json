@@ -1,0 +1,32 @@
+{
+  "format": 1,
+  "version": "20261019-1",
+  "builtAt": "2026-10-29",
+  "count": 253536,
+  "shardCount": 1024,
+  "record": [
+    "title",
+    "author",
+    "publisher",
+    "language",
+    "origin"
+  ],
+  "sourceLabels": {
+    "ncl": "國家圖書館開放書目",
+    "gpi": "文化部政府出版品書目"
+  },
+  "license": "政府資料開放授權條款－第1版",
+  "licenseUrl": "https://data.gov.tw/license",
+  "datasets": [
+    "https://data.gov.tw/dataset/27311",
+    "https://data.gov.tw/dataset/7502",
+    "https://data.gov.tw/dataset/6730",
+    "https://data.gov.tw/dataset/35215"
+  ],
+  "coverage": [
+    "國家圖書館113年度新增書目（中外文，含較早出版品）",
+    "NBINet 115年第2季新增書目（中外文）",
+    "臺灣出版新書預告書訊：2025年1月–2026年8月（中外文）",
+    "文化部政府出版品資訊網公開書目快照（具有效 ISBN 的歷年及預告出版紀錄）"
+  ]
+}
