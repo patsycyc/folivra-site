@@ -1,11 +1,11 @@
 {
   "format": 2,
-  "version": "20261019-2",
+  "version": "20261029-1",
   "builtAt": "2026-10-29",
-  "count": 253536,
-  "chineseCount": 218763,
-  "withClassNo": 45585,
-  "withTopic": 168355,
+  "count": 258421,
+  "chineseCount": 223512,
+  "withClassNo": 47313,
+  "withTopic": 173240,
   "shardCount": 1024,
   "record": [
     "title",
@@ -28,18 +28,18 @@
     "https://data.gov.tw/dataset/6730",
     "https://data.gov.tw/dataset/35215"
   ],
-  "inputRows": 359205,
+  "inputRows": 364282,
   "invalidIsbnTokens": 888,
   "files": [
     {
-      "file": "catalog.csv",
+      "file": "catalog-113.csv",
       "url": "https://www.ncl.edu.tw/OpenDataFile/0Q160688598693591195/1bcea559-39ad-4e31-a881-b241a9b8fdee",
       "sha256": "4409945b07acf500fef768e88f0a7d71bde6bdeb42d05983a1718d28dabbff03",
       "rows": 118154,
       "newIsbns": 76814
     },
     {
-      "file": "nbinet.csv",
+      "file": "nbinet-115Q2.csv",
       "url": "https://www.ncl.edu.tw/OpenDataFile/0Q155002975285157159/a3de23b3-e48c-4cd9-bb2c-374de4abecde",
       "sha256": "4cbc8f83354b4b454bb78ea4bbc6db7e048e527c219e41d5004726cffccac7e7",
       "rows": 20407,
@@ -186,11 +186,18 @@
       "newIsbns": 5274
     },
     {
+      "file": "newbooks-2026-09.csv",
+      "url": "https://www.ncl.edu.tw/OpenDataFile/0Q169585372033888603/f145757e-9367-4e8c-bcb2-3ed630a7c0b9",
+      "sha256": "8b6e16fc8ba54caa2bf7d2557ea21ed41d0656bc763f0788080b8bb3cb928ed9",
+      "rows": 5077,
+      "newIsbns": 5077
+    },
+    {
       "file": "gpi.json",
       "url": "https://gpi.culture.tw/opendata/publications.json",
       "sha256": "4abed58bce57cd68c068500d120c391f6dc4fcdc39b1a9703fe9e4527ec9d6d3",
       "rows": 118238,
-      "newIsbns": 65142
+      "newIsbns": 64950
     }
   ]
 }

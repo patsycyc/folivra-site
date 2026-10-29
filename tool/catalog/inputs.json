@@ -7,6 +7,13 @@
     "sha256": "4409945b07acf500fef768e88f0a7d71bde6bdeb42d05983a1718d28dabbff03"
   },
   {
+    "file": "gpi.json",
+    "dataset": "35215",
+    "label": "GPI政府出版品資訊網書目資料",
+    "url": "https://gpi.culture.tw/opendata/publications.json",
+    "sha256": "4abed58bce57cd68c068500d120c391f6dc4fcdc39b1a9703fe9e4527ec9d6d3"
+  },
+  {
     "file": "nbinet-115Q2.csv",
     "dataset": "7502",
     "label": "NBINet圖書聯合目錄(115年第2季)",
@@ -154,10 +161,10 @@
     "sha256": "c5cd1f87700b6068023404b8586084481c842fe37818d75555d93bd586e929e9"
   },
   {
-    "file": "gpi.json",
-    "dataset": "35215",
-    "label": "GPI政府出版品資訊網書目資料",
-    "url": "https://gpi.culture.tw/opendata/publications.json",
-    "sha256": "4abed58bce57cd68c068500d120c391f6dc4fcdc39b1a9703fe9e4527ec9d6d3"
+    "file": "newbooks-2026-09.csv",
+    "dataset": "6730",
+    "label": "提供115年9月份各出版者向國家圖書館國際標準書號中心申請ISBN之新書書目資料",
+    "url": "https://www.ncl.edu.tw/OpenDataFile/0Q169585372033888603/f145757e-9367-4e8c-bcb2-3ed630a7c0b9",
+    "sha256": "8b6e16fc8ba54caa2bf7d2557ea21ed41d0656bc763f0788080b8bb3cb928ed9"
   }
 ]
