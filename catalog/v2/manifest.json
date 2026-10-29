@@ -1,0 +1,196 @@
+{
+  "format": 2,
+  "version": "20261019-2",
+  "builtAt": "2026-10-29",
+  "count": 253536,
+  "chineseCount": 218763,
+  "withClassNo": 45585,
+  "withTopic": 168355,
+  "shardCount": 1024,
+  "record": [
+    "title",
+    "author",
+    "publisher",
+    "language",
+    "origin",
+    "classNo",
+    "topic"
+  ],
+  "sourceLabels": {
+    "ncl": "國家圖書館開放書目",
+    "gpi": "文化部政府出版品書目"
+  },
+  "license": "政府資料開放授權條款－第1版",
+  "licenseUrl": "https://data.gov.tw/license",
+  "datasets": [
+    "https://data.gov.tw/dataset/27311",
+    "https://data.gov.tw/dataset/7502",
+    "https://data.gov.tw/dataset/6730",
+    "https://data.gov.tw/dataset/35215"
+  ],
+  "inputRows": 359205,
+  "invalidIsbnTokens": 888,
+  "files": [
+    {
+      "file": "catalog.csv",
+      "url": "https://www.ncl.edu.tw/OpenDataFile/0Q160688598693591195/1bcea559-39ad-4e31-a881-b241a9b8fdee",
+      "sha256": "4409945b07acf500fef768e88f0a7d71bde6bdeb42d05983a1718d28dabbff03",
+      "rows": 118154,
+      "newIsbns": 76814
+    },
+    {
+      "file": "nbinet.csv",
+      "url": "https://www.ncl.edu.tw/OpenDataFile/0Q155002975285157159/a3de23b3-e48c-4cd9-bb2c-374de4abecde",
+      "sha256": "4cbc8f83354b4b454bb78ea4bbc6db7e048e527c219e41d5004726cffccac7e7",
+      "rows": 20407,
+      "newIsbns": 15664
+    },
+    {
+      "file": "newbooks-2025-01.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1761529950.csv",
+      "sha256": "4fa5ec2014724eda998875690282fcf8fbc899f392e595fa3e0a13f282bd72ea",
+      "rows": 3318,
+      "newIsbns": 2915
+    },
+    {
+      "file": "newbooks-2025-02.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1761530128.csv",
+      "sha256": "50914ac5cc782d71dd81186957866fc833b41e237b676cc54a1d174d8d41836e",
+      "rows": 4215,
+      "newIsbns": 3700
+    },
+    {
+      "file": "newbooks-2025-03.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1761530155.csv",
+      "sha256": "3c4a9a7d7345569755360f64fab323e5f7a3c01ccd86940443bbc620548204a8",
+      "rows": 5151,
+      "newIsbns": 4487
+    },
+    {
+      "file": "newbooks-2025-04.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1761530175.csv",
+      "sha256": "e2a390fd0a807813f88cc3188277ebc303fabba6e82570e5efae1eb508fdaed5",
+      "rows": 5354,
+      "newIsbns": 4687
+    },
+    {
+      "file": "newbooks-2025-05.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1761530199.csv",
+      "sha256": "1d6ae1732cbad9dfc39c6ad2f91b29d8ea82677ca804cc8d1126ff624c454573",
+      "rows": 5287,
+      "newIsbns": 4560
+    },
+    {
+      "file": "newbooks-2025-06.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1761530219.csv",
+      "sha256": "ca40234d1409e098fd31b631b6c76cf3a0b166e7ba9880f3831735a10482b6ea",
+      "rows": 5282,
+      "newIsbns": 4771
+    },
+    {
+      "file": "newbooks-2025-07.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1761530240.csv",
+      "sha256": "4159144f5c87f01f23684b929f537b8a4d68220d3c1dadbc4bf03ad3f90314de",
+      "rows": 5511,
+      "newIsbns": 4907
+    },
+    {
+      "file": "newbooks-2025-08.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1761530260.csv",
+      "sha256": "15d9c83bcd226d1a5f2743d58dd3e99e01e43620b5124ebc88627e5df6626dc4",
+      "rows": 5188,
+      "newIsbns": 4595
+    },
+    {
+      "file": "newbooks-2025-09.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1761530279.csv",
+      "sha256": "b7f36bd8556265d4058e00a05413a84b5d84b8938590e787f1bce7ce916f5851",
+      "rows": 5330,
+      "newIsbns": 4813
+    },
+    {
+      "file": "newbooks-2025-10.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1763437735.csv",
+      "sha256": "54bff5bfa2d9567f9f6ec8b436c0ea1a2d6d0dada279f957445155bfcac6a62d",
+      "rows": 5538,
+      "newIsbns": 5104
+    },
+    {
+      "file": "newbooks-2025-11.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1765856445.csv",
+      "sha256": "0cca4366d4a668edf220eb0d6e236d6ac4c2e7e4c532046a4e880e3e30a487b5",
+      "rows": 5117,
+      "newIsbns": 4742
+    },
+    {
+      "file": "newbooks-2025-12.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1769150466.csv",
+      "sha256": "04c70fed32d4fe29bd025b877c6b6357a871c4d2c4de696e45882ac9efcdf41e",
+      "rows": 6025,
+      "newIsbns": 5713
+    },
+    {
+      "file": "newbooks-2026-01.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1771916633.csv",
+      "sha256": "ee7375815b77616945078b75d4b50e142a35239501ecaf470e087d317d83c0e7",
+      "rows": 4524,
+      "newIsbns": 4401
+    },
+    {
+      "file": "newbooks-2026-02.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1774301323.csv",
+      "sha256": "7df013f809ded89bbbae4b568d9172691bba95fbb935aaa91969af1e6a069ca0",
+      "rows": 3088,
+      "newIsbns": 3073
+    },
+    {
+      "file": "newbooks-2026-03.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1776399667.csv",
+      "sha256": "9d52778337dac7f119ef718f62d38a89f83bfb5882ef3d556035e1de9a8c40d7",
+      "rows": 5728,
+      "newIsbns": 5701
+    },
+    {
+      "file": "newbooks-2026-04.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1779876200.csv",
+      "sha256": "4ae24e286610aa0bfa108b8b51c79798c70c656ba4f5a3d85cb6e922ba1e2de6",
+      "rows": 5787,
+      "newIsbns": 5785
+    },
+    {
+      "file": "newbooks-2026-05.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1781770151.csv",
+      "sha256": "258db59ca9038f09166eaf9448c9c11b8249a4f6a73e2557eda990e02837f29e",
+      "rows": 5431,
+      "newIsbns": 5431
+    },
+    {
+      "file": "newbooks-2026-06.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1784797782.csv",
+      "sha256": "773e2bb9fa6049dc9e57852347097009e928ffaeb10d402ef940c461ae617afa",
+      "rows": 5330,
+      "newIsbns": 5329
+    },
+    {
+      "file": "newbooks-2026-07.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1787213979.csv",
+      "sha256": "c39fd491cbb9b7bf5aedb62f9cf9164ac99f6c900e3fa9e63161e1a6aa9227b8",
+      "rows": 5928,
+      "newIsbns": 5928
+    },
+    {
+      "file": "newbooks-2026-08.csv",
+      "url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1790071160.csv",
+      "sha256": "c5cd1f87700b6068023404b8586084481c842fe37818d75555d93bd586e929e9",
+      "rows": 5274,
+      "newIsbns": 5274
+    },
+    {
+      "file": "gpi.json",
+      "url": "https://gpi.culture.tw/opendata/publications.json",
+      "sha256": "4abed58bce57cd68c068500d120c391f6dc4fcdc39b1a9703fe9e4527ec9d6d3",
+      "rows": 118238,
+      "newIsbns": 65142
+    }
+  ]
+}
