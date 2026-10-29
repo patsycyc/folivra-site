@@ -30,7 +30,6 @@ jobs:
     timeout-minutes: 60
     env:
       GH_TOKEN: ${{ github.token }}
-      RAW: ${{ runner.temp }}/raw
     steps:
       - uses: actions/checkout@v4
 
@@ -42,11 +41,11 @@ jobs:
 
       - name: 查最新的書目來源
         id: sources
-        run: python3 tool/catalog/sources.py update tool/catalog/inputs.json "$RAW"
+        run: python3 tool/catalog/sources.py update tool/catalog/inputs.json "$RUNNER_TEMP/raw"
 
       - name: 取得全部原始檔
         if: steps.sources.outputs.changed == 'true' || inputs.force
-        run: python3 tool/catalog/sources.py fetch tool/catalog/inputs.json "$RAW"
+        run: python3 tool/catalog/sources.py fetch tool/catalog/inputs.json "$RUNNER_TEMP/raw"
 
       - name: 保存原始檔到 catalog-inputs 發行版
         if: (steps.sources.outputs.changed == 'true' || inputs.force) && !inputs.dry_run
@@ -57,13 +56,13 @@ jobs:
           have=$(gh release view catalog-inputs --json assets --jq '.assets[].name')
           for f in $(jq -r '.[].file' tool/catalog/inputs.json); do
             if ! grep -qx "$f" <<< "$have" || [ "$f" = gpi.json ]; then
-              gh release upload catalog-inputs "$RAW/$f" --clobber
+              gh release upload catalog-inputs "$RUNNER_TEMP/raw/$f" --clobber
             fi
           done
 
       - name: 重建
         if: steps.sources.outputs.changed == 'true' || inputs.force
-        run: python3 tool/catalog/build_catalog.py tool/catalog/inputs.json "$RAW" "$RUNNER_TEMP/v2"
+        run: python3 tool/catalog/build_catalog.py tool/catalog/inputs.json "$RUNNER_TEMP/raw" "$RUNNER_TEMP/v2"
 
       - name: 與目前發布的書目比對
         if: steps.sources.outputs.changed == 'true' || inputs.force
