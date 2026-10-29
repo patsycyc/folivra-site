@@ -1,0 +1,86 @@
+name: 書目每月更新
+
+# 每月 5 日（台灣時間 10:37）查政府資料開放平臺有沒有新的書目資料，有就重建並發布到 catalog/v2/。
+# 也可以在 Actions 頁面手動執行（Run workflow）。
+on:
+  schedule:
+    - cron: '37 2 5 * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '沒有新資料也重建'
+        type: boolean
+        default: false
+      dry_run:
+        description: '只重建與比對，不發布'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: catalog
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: 重建書目
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RAW: ${{ runner.temp }}/raw
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 測試
+        run: |
+          python3 tool/catalog/test_author_clean.py
+          python3 tool/catalog/test_build_catalog.py
+          python3 tool/catalog/test_sources.py
+
+      - name: 查最新的書目來源
+        id: sources
+        run: python3 tool/catalog/sources.py update tool/catalog/inputs.json "$RAW"
+
+      - name: 取得全部原始檔
+        if: steps.sources.outputs.changed == 'true' || inputs.force
+        run: python3 tool/catalog/sources.py fetch tool/catalog/inputs.json "$RAW"
+
+      - name: 保存原始檔到 catalog-inputs 發行版
+        if: (steps.sources.outputs.changed == 'true' || inputs.force) && !inputs.dry_run
+        run: |
+          gh release view catalog-inputs > /dev/null 2>&1 || \
+            gh release create catalog-inputs --title "書目原始資料" \
+              --notes "國家圖書館、文化部開放資料的原始檔（政府資料開放授權條款－第 1 版），重建書目用。清單與雜湊見 tool/catalog/inputs.json。"
+          have=$(gh release view catalog-inputs --json assets --jq '.assets[].name')
+          for f in $(jq -r '.[].file' tool/catalog/inputs.json); do
+            if ! grep -qx "$f" <<< "$have" || [ "$f" = gpi.json ]; then
+              gh release upload catalog-inputs "$RAW/$f" --clobber
+            fi
+          done
+
+      - name: 重建
+        if: steps.sources.outputs.changed == 'true' || inputs.force
+        run: python3 tool/catalog/build_catalog.py tool/catalog/inputs.json "$RAW" "$RUNNER_TEMP/v2"
+
+      - name: 與目前發布的書目比對
+        if: steps.sources.outputs.changed == 'true' || inputs.force
+        run: |
+          python3 tool/catalog/compare_shards.py catalog/v2 "$RUNNER_TEMP/v2" || true
+          old=$(jq .count catalog/v2/manifest.json); new=$(jq .count "$RUNNER_TEMP/v2/manifest.json")
+          echo "目前 $old 筆，重建 $new 筆"
+          # 筆數少了 1% 以上多半是資料出錯，不發布。
+          if [ "$new" -lt $((old * 99 / 100)) ]; then echo "::error title=筆數異常::重建只有 $new 筆（目前 $old 筆），不發布"; exit 1; fi
+
+      - name: 發布
+        if: (steps.sources.outputs.changed == 'true' || inputs.force) && !inputs.dry_run
+        run: |
+          rm -f catalog/v2/*.json
+          cp "$RUNNER_TEMP"/v2/*.json catalog/v2/
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tool/catalog/inputs.json catalog/v2
+          git commit -qm "書目更新 $(jq -r .version catalog/v2/manifest.json)（$(jq -r .count catalog/v2/manifest.json) 筆）：${{ steps.sources.outputs.changes }}"
+          git push -q
