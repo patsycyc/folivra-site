@@ -9,9 +9,9 @@
   {
     "file": "gpi.json",
     "dataset": "35215",
-    "label": "GPI政府出版品資訊網書目資料",
+    "label": "1912年至2025年GPI政府出版品資訊網書目資料",
     "url": "https://gpi.culture.tw/opendata/publications.json",
-    "sha256": "4abed58bce57cd68c068500d120c391f6dc4fcdc39b1a9703fe9e4527ec9d6d3"
+    "sha256": "6eacfb7c6874f6540c742b023a00889d042866e773b149e8e3dac6085c336576"
   },
   {
     "file": "nbinet-115Q2.csv",
@@ -19,6 +19,13 @@
     "label": "NBINet圖書聯合目錄(115年第2季)",
     "url": "https://www.ncl.edu.tw/OpenDataFile/0Q155002975285157159/a3de23b3-e48c-4cd9-bb2c-374de4abecde",
     "sha256": "4cbc8f83354b4b454bb78ea4bbc6db7e048e527c219e41d5004726cffccac7e7"
+  },
+  {
+    "file": "nbinet-115Q3.csv",
+    "dataset": "7502",
+    "label": "NBINet圖書聯合目錄(115年第3季)",
+    "url": "https://www.ncl.edu.tw/OpenDataFile/0Q155002975285157159/24f62d43-66c8-45a0-8caf-c37ec5e01916",
+    "sha256": "9752502640fc47ce4db1e532745b4abe70b4c57d1d287b599cfce3a8aec2f5a5"
   },
   {
     "file": "newbooks-2025-01.csv",
